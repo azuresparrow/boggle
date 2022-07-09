@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row">
+    <div class="col-md-8 text-center">
+        {% for line in board %}
+            <div class="row justify-content-center">
+            {% for char in line %}
+                <div class="boggle_char">{{char}}</div>
+            {% endfor %}
+            </div>
+        {% endfor %}
+        
+        <form id="guess" class="mt-4">
+            <div class="input-group">
+                <input type="text" class="form-control mw-4" id="word" autocomplete="off">
+                <input type="submit" style="display:inline" class="btn btn-outline-primary " value="Guess Word" ></button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-3 text-left">
+        <h4 id="timer">Timer: 60</h4>
+        <h4>Score: <span id="score">0</span></h4>
+        <p class="mb-0">High Score: <span id="highscore">{{highscore}}</span></p>
+        <p>Games Played: <span id="plays">{{plays}}</span></p>
+        <ul class="mt-4" id="list">
+        </ul>
+    </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+ul {
+    list-style-type: none;
+    padding:0;
+}
+
+p {
+    color:grey;
+}
+
+#guess {
+    max-width: 500px;
+    margin:auto;
+}
+
+.boggle_char {
+    padding:10px;
+    width:80px;
+    height:80px;
+    font-size:  40px;
+    font-weight: bolder;
+    margin:10px;
+    float:right;
+    background-color: tan;
+    color:black;
+}
